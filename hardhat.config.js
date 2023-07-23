@@ -30,7 +30,7 @@ module.exports = {
       gasPrice: 225000000000,
       chainId: 43113,
       accounts: [
-       "b1b736d515cad4bb3fd8df036485eb3b99917f05cd242cae74ece234e22235e5"
+       "Your private key"
       ]
     },
     mainnet: {
@@ -43,6 +43,6 @@ module.exports = {
     }
   },
   etherscan: {
-    apiKey: "RJET8C5G9BCYA8HPSFSI2VXRMIG58PHIRV",
+    apiKey: "your api address",
   },
 }
