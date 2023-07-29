@@ -3,9 +3,7 @@
 # 1
 
 install all of the required files .. 
-1st:  npm init -y  
-
-2nd:   npm install --save-dev "hardhat@^2.17.0" "@nomicfoundation/hardhat-toolbox@^3.0.0"
+1st:  npm i
 
 3rd: npx hardhat run ./scripts/deploy.js --network fuji 
 (now update the token address into all of the scripts)
@@ -15,6 +13,7 @@ install all of the required files ..
 now enter the amount you want to mint
 
 
-6th: In the same way you can use : transfers, Bal,Burn and redeem scripts to do all these names suggests ..........
+6th: In the same way you can use : transfers, Bal,Burn and redeem scripts to do all these names suggests 
+
 7th: can track all of the transactions on https://testnet.snowtrace.io/
 through your testnet address 
