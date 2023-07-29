@@ -8,13 +8,13 @@ install all of the required files ..
 2nd:   npm install --save-dev "hardhat@^2.17.0" "@nomicfoundation/hardhat-toolbox@^3.0.0"
 
 3rd: npx hardhat run ./scripts/deploy.js --network fuji 
-
+(now update the token address into all of the scripts)
 4th: npx hardhat verify < address of deployed contract > --network fuji
 
-5th: run remixd and open remix ide to interact with the contract deployed 
+5th: npx hardhat run ./scripts/mint.js --network fuji 
+now enter the amount you want to mint
 
-6th: enter the address of deployed contract on remix and deploy it.. 
 
+6th: In the same way you can use : transfers, Bal,Burn and redeem scripts to do all these names suggests ..........
 7th: can track all of the transactions on https://testnet.snowtrace.io/
-
 through your testnet address 
