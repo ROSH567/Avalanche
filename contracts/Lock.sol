@@ -24,9 +24,10 @@ contract DT is ERC20, Ownable,ERC20Burnable {
             approve(msg.sender, amt);
             transferFrom(msg.sender, to, amt);
         }
-        function redeem(uint amt) external{
+        function redeem(uint amt) external returns(string memory ){
             approve(msg.sender, amt);
             transferFrom(msg.sender, owners, amt);
+            return ("redemption was successful ");
         }
 
         
