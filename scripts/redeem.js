@@ -2,7 +2,8 @@ const hre = require("hardhat");
 const readline = require("readline");
 const tokenContractJSON = require("../artifacts/contracts/Lock.sol/DT.json");
 const tokenABI = tokenContractJSON.abi;
-const signeraddress = "0x7c188D88BB320C2416709428f2cD11Ef5710aeFB";
+const signeraddress = "0xd2253c197D075c8C44924017a09E8761dc4135f2";
+const tokenaddress = "0xd2253c197D075c8C44924017a09E8761dc4135f2";
 
 async function main() {
   const rl = readline.createInterface({
@@ -33,7 +34,10 @@ console.log("-------------   3. GiftVoucher worth 1000 (30000tokens)  ----------
 console.log("-------------                                          -------------");
 console.log("--------------------------------------------------------------------");
 console.log("-------------                                          -------------");
-console.log("\n\n");1
+console.log("\n\n");
+const q1="GiftVoucher worth 200"
+const q2="GiftVoucher worth 500"
+const q3="GiftVoucher worth 1000"
 
 
   rl.question("    Please enter the choice to redeem : ", async (choiceInput) => {
@@ -45,23 +49,27 @@ console.log("\n\n");1
       const tx=await signer.redeem(10000);
       await tx.wait();
   
-          
-
-
+      console.log("redemtion for "+q1+" was successful");
+      
+      
     }
     else if(choice==2)
     {
-     
+      
       const tx=await signer.redeem(17000);
-      await tx.wait();    }
+      await tx.wait();    
+      console.log("redemtion for "+q2+" was successful");
+    }
     else if(choice==3)
     {
-
+      
       const tx=await signer.redeem(30000);
       await tx.wait();
+      console.log("redemtion for "+q3+" was successful");
     }
 
     console.log("    "+await signer.Balance() + " is the updated balance");
+
     console.log("              transaction by -- " + await signer.getAddress());
   });
 }
