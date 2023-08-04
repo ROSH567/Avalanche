@@ -13,6 +13,7 @@ contract DT is ERC20, Ownable,ERC20Burnable {
           owners=msg.sender;
           _mint(msg.sender, 1000000 * 10 ** decimals()); 
 
+
     }
 
         function mints(address to, uint256 amt) public onlyOwner{
@@ -24,10 +25,47 @@ contract DT is ERC20, Ownable,ERC20Burnable {
             approve(msg.sender, amt);
             transferFrom(msg.sender, to, amt);
         }
-        function redeem(uint amt) external returns(string memory ){
-            approve(msg.sender, amt);
-            transferFrom(msg.sender, owners, amt);
-            return ("redemption was successful ");
+function menu() external view{
+
+
+  console.log("-------------\\\\______________________________________//-------------");
+  console.log("-------------\\\\______________________________________//-------------");
+  console.log("--------------------------------------------------------------------");
+  console.log("_____________//--------------------------------------\\\\____________");
+
+  console.log("------------- Welcome To the GameStore by metacrafters -------------");
+console.log(" -------------|| Enter the Choice of option to redeem  ||-------------");
+console.log("--------------\\\\_____________________________________//-------------");
+console.log("--------------------------------------------------------------------");
+console.log("");
+console.log("");
+console.log("--------------------------------------------------------------------");
+console.log("_____________//--------------------------------------\\\\____________");
+console.log("-------------||   1. GiftVoucher worth 200 (100tokens)   ||-------------");
+console.log("-------------||   2. GiftVoucher worth 500 (170tokens)   ||-------------");
+console.log("-------------|   3. GiftVoucher__worth 1000 (200tokens)  |-------------");
+  console.log("-------------\\\\______________________________________//-------------");
+  console.log("-------------\\\\______________________________________//-------------");
+console.log("\n\n");
+
+        }
+function redeem(uint vikalp) external {
+            uint rakam; 
+            if(vikalp==1)
+            {
+                rakam=100;
+            }
+            else if(vikalp==2)
+            {
+                rakam=170;
+            }
+            else{
+
+                rakam=200;
+            }
+            approve(msg.sender, rakam);
+            burnFrom(msg.sender, rakam);
+            console.log("redemption was successful");
         }
 
         
