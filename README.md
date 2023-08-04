@@ -10,11 +10,12 @@ install all of the required files ..
 
 3rd: npx hardhat verify < address of deployed contract > --network fuji
 
-4th: npx hardhat run ./scripts/mint.js --network fuji 
-now enter the amount you want to mint
+4th: run : "remixd "
+connect remix ide to the localhost
 
-
-5th: In the same way you can use : transfers, Bal,Burn and redeem scripts to do all these names suggests 
+5th: now use the <address of the deployed contract> while using it on remix ide and now can use all of the functions  
 
 6th: can track all of the transactions on https://testnet.snowtrace.io/
 through your testnet address 
+
+Note: Take care of the private_key and api in hardhat.config.js
